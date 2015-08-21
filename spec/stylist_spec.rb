@@ -52,4 +52,14 @@ describe('.delete') do
   end
 end
 
+describe('#update') do
+  it('updates a stylist information') do
+    test_stylist = Stylist.new({:name => 'Zohan Dvir', :id => nil})
+    test_stylist.save()
+    test_stylist.update({:name => 'THE Zohan Dvir', :id => nil})
+    expect(test_stylist.name()).to(eq('THE Zohan Dvir'))
+  end
+end
+
+
 end

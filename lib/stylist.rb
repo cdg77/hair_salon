@@ -20,6 +20,12 @@ class Stylist
     DB.exec("DELETE FROM stylists WHERE id = #{self.id()};")
   end
 
+  define_method(:update) do |attributes|
+    @name = attributes.fetch(:name, @name)
+    @id = self.id()
+    DB.exec("UPDATE stylists SET name = '#{@name}' WHERE id = #{id};")
+  end
+
   define_singleton_method(:all) do
     returned_stylists = DB.exec("SELECT * FROM stylists;")
     stylists = []
