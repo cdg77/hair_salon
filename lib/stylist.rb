@@ -16,6 +16,10 @@ class Stylist
     @id = result.first().fetch("id").to_i()
   end
 
+  define_method(:delete) do
+    DB.exec("DELETE FROM stylists WHERE id = #{self.id()};")
+  end
+
   define_singleton_method(:all) do
     returned_stylists = DB.exec("SELECT * FROM stylists;")
     stylists = []
@@ -36,4 +40,5 @@ class Stylist
     end
     found_stylist
   end
+
 end
