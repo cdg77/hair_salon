@@ -1,10 +1,14 @@
 class Stylist
 
-  attr_reader(:stylist_name, :id)
+  attr_reader(:name, :id)
 
   define_method(:initialize) do |attributes|
-    @stylist_name = attributes.fetch(:stylist_name)
+    @name = attributes.fetch(:name)
     @id = attributes.fetch(:id)
+  end
+
+  define_method(:==) do |another_stylist|
+    self.name() == another_stylist.name() && self.id() == another_stylist.id()
   end
 
 end
