@@ -1,6 +1,6 @@
 # _{ Hair Salon }_
 
-##### _{Brief description of application}, {09/22/2015}_
+##### _{An app that can save and list stylists and clients.  Uses a satabase to relate many clients to each stylist}, {09/22/2015}_
 
 #### By _**{Carlo De Gregorio}**_
 
@@ -11,9 +11,10 @@ _{This is a an app for a hair salon. The stylists at the salon work
 ### User Storie:
 * _As a salon owner, I want to view, add, update and delete stylists.
 * _As a salon owner, I want to view, add, update and delete clients.
-* _As a salon owner, I want to add clients to a stylist..
+* _As a salon owner, I want to add clients to a stylist.
 }_
-_{This app is for my testing and educational purposes. I cannot promise anything... Use at your own risk!}_
+
+##### _****{This app is for my testing and educational purposes. I cannot promise anything... Use at your own risk!}****_
 
 
 ## Setup
