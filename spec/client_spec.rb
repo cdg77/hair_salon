@@ -1,6 +1,6 @@
-require('rspec')
-require ('scripts')
+# require('rspec')
+# require ('scripts')
 
-describe do |variable|
+# describe do |variable|
 
-end
+# end
