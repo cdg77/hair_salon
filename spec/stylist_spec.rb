@@ -9,11 +9,18 @@ describe(Stylist) do
   end
 
 describe('#==') do
-    it('over-write the equal comparator') do
+    it('overrides the equal comparator') do
       test_stylist1 = Stylist.new(:name => 'Truvy Jones', :id => 1)
       test_stylist2 = Stylist.new(:name => 'Truvy Jones', :id => 1)
       expect(test_stylist1).to(eq(test_stylist2))
     end
   end
+
+  describe('.all') do
+    it('returns an empty array at first') do
+      expect(Stylist.all()).to(eq([]))
+    end
+  end
+
 
 end
