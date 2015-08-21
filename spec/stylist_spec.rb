@@ -1,5 +1,5 @@
 require('spec_helper')
 
-describe do |variable|
+describe(Stylist) do
 
 end
