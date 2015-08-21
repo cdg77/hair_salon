@@ -24,6 +24,16 @@ describe('#save') do
   end
 end
 
+describe('.find') do
+  it('finds a stylist by their id') do
+    test_stylist1 = Stylist.new({:name => 'Truvy Jones', :id => nil})
+    test_stylist1.save()
+    test_stylist2 = Stylist.new({:name => 'Zohan Dvir', :id => nil})
+    test_stylist2.save()
+    expect(Stylist.find(test_stylist2.id().to_i)).to(eq(test_stylist2))
+  end
+end
+
 describe('.all') do
   it('returns an empty array at first') do
     expect(Stylist.all()).to(eq([]))
