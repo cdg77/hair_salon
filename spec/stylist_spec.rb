@@ -16,11 +16,19 @@ describe('#==') do
     end
   end
 
-  describe('.all') do
-    it('returns an empty array at first') do
-      expect(Stylist.all()).to(eq([]))
-    end
+describe('#save') do
+  it('saves a stylist to the salon database') do
+    test_stylist = Stylist.new({:name => 'Truvy Jones', :id => nil})
+    test_stylist.save()
+    expect(Stylist.all()).to(eq([test_stylist]))
   end
+end
+
+describe('.all') do
+  it('returns an empty array at first') do
+    expect(Stylist.all()).to(eq([]))
+  end
+end
 
 
 end
