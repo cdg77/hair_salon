@@ -1,7 +1,10 @@
 <h1>GetYourHairDidRight Salon</h1>
 
+<% if @stylists.any?() %>
+<p>These stylists have some real chops!</p>
+
 <ul>
-  <% if @stylists.any?() do |stylist| %>
+  <% @stylists.each() do |stylist| %>
   <li><%= stylist.name() %></li>
   <% end %>
 </ul>
