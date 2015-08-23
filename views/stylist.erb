@@ -1,0 +1,21 @@
+<h1>Our Stylists have an EDGE</h1>
+
+<% if @stylists.any?() %>
+<p>Stylists: </p>
+
+<ul class="nav nav-pills nav-stacked">
+  <% @stylists.each() do |stylist| %>
+  <li class="active"><a href=""><%= stylist.name() %></a></li>
+  <% end %>
+</ul>
+
+<% else %>
+
+<h3 class="text-primary">
+  <strong>curl up and dye...</strong>
+</h3>
+
+<form action="/new_stylist" method="post">
+  <input id="new_stylist" name="new_stylist" type="text" placeholder="Edward Scissorhands" >
+  <button type="submit" class="btn-danger">Add a Stylist!</button>
+</form>
